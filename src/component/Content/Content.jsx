@@ -10,11 +10,11 @@ import About from "./About/About";
 const Content = () => {
   return (
     <div className={s.content}>
-        <Route path='/profile' component={Profile} />
-        <Route path='/home' component={Home} />
-        <Route path='/news' component={News} />
-        <Route path='/messages' component={Messages} />
-        <Route path='/about' component={About} />
+        <Route path='/profile' render={ () => <Profile />} />
+        <Route path='/home' component={ () => <Home />} />
+        <Route path='/news' component={ () => <News />} />
+        <Route path='/messages' component={ () => <Messages />} />
+        <Route path='/about' component={ () => <About />} />
     </div>
   );
 };
