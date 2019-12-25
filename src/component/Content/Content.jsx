@@ -7,16 +7,18 @@ import News from "./News/News";
 import Messages from "./Messages/Messages";
 import About from "./About/About";
 
-const Content = () => {
-  return (
-    <div className={s.content}>
-        <Route path='/profile' render={ () => <Profile />} />
-        <Route path='/home' component={ () => <Home />} />
-        <Route path='/news' component={ () => <News />} />
-        <Route path='/messages' component={ () => <Messages />} />
-        <Route path='/about' component={ () => <About />} />
-    </div>
-  );
+const Content = (props) => {
+    console.log(props.postsData);
+    return (
+        <div className={s.content}>
+            <Route path='/profile' render={() => <Profile postsData={props.postsData}/>}/>
+            <Route path='/home' component={() => <Home/>}/>
+            <Route path='/news' component={() => <News/>}/>
+            <Route path='/messages'
+                   component={() => <Messages dialogMessages={props.dialogMessages} dialogItem={props.dialogItem}/>}/>
+            <Route path='/about' component={() => <About/>}/>
+        </div>
+    );
 };
 
 export default Content;

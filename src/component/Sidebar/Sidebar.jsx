@@ -5,13 +5,13 @@ import Navigation from './Navigation/Navigation';
 import Footer from './Footer/Footer';
 
 const Sidebar = () => {
-  return (
-    <div className={s.sidebar}>
-      <Header />
-      <Navigation />
-      <Footer />
-    </div>
-  );
+    return (
+        <div className={s.sidebar}>
+            <Header/>
+            <Navigation/>
+            <Footer/>
+        </div>
+    );
 };
 
 export default Sidebar;

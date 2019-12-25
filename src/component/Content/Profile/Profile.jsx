@@ -6,8 +6,8 @@ import Posts from "./Posts/Posts";
 const Profile = (props) => {
     return (
         <main className={s.content}>
-            <Info />
-            <Posts />
+            <Info/>
+            <Posts postsData={props.postsData}/>
         </main>
     )
 };
