@@ -18,7 +18,7 @@ const Navigation = (props) => {
       </form>
       <ul>
         <li className={s.socialLink}>
-          <a href="/#"><img src="//IT'S A HUGE QUESTION!!!"  alt=''/></a>
+          <a href="/#"><img src="/"  alt=''/></a>
         </li>
       </ul>
     </div>

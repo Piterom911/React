@@ -8,14 +8,13 @@ import Messages from "./Messages/Messages";
 import About from "./About/About";
 
 const Content = (props) => {
-    console.log(props.postsData);
     return (
         <div className={s.content}>
-            <Route path='/profile' render={() => <Profile postsData={props.postsData}/>}/>
+            <Route path='/profile' render={() => <Profile postsData={props.state.postsPage}/>}/>
             <Route path='/home' component={() => <Home/>}/>
             <Route path='/news' component={() => <News/>}/>
             <Route path='/messages'
-                   component={() => <Messages dialogMessages={props.dialogMessages} dialogItem={props.dialogItem}/>}/>
+                   component={() => <Messages dialogMessages={props.state.dialogsPage}/>}/>
             <Route path='/about' component={() => <About/>}/>
         </div>
     );
