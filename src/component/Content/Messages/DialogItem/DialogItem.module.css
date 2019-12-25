@@ -1,0 +1,33 @@
+.nameItem {
+    margin-bottom: 15px;
+    padding-bottom: 3px;
+    cursor: pointer;
+    border-bottom: 1px solid #f5f4f2;
+    letter-spacing: .1em;
+    position: relative;
+}
+
+.nameItem:after {
+    display: block;
+    content: '→';
+    position: absolute;
+    top: 0;
+    right: 0;
+    color: #ccc;
+    transition: color .2s;
+}
+
+.linkItem {
+    color: #777;
+    list-style-type: none;
+    transition: color .2s;
+}
+
+.linkItem:hover {
+    color: #000;
+}
+
+.active {
+    font-weight: 700;
+    color: black;
+}

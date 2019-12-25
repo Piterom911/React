@@ -1,0 +1,39 @@
+.dialogs {
+    display: grid;
+    grid-template-columns: 2fr 8fr;
+    grid-gap: 50px;
+}
+
+.messagesWrapper {
+    padding: 44px 40px;
+}
+
+.messagesWrapper h1 {
+    margin-top: 0;
+}
+
+.messagesWrapper h2 {
+    font-size: 20px;
+    font-weight: 400;
+    color: #999999;
+    margin-bottom: 20px;
+}
+
+.names, .messages {
+    background-color: #fff;
+    height: 100vh;
+    padding: 20px;
+    box-shadow: 0 1px 3px hsla(0,0%,39%,.15);
+}
+
+
+
+.messages p {
+    margin-bottom: 36px;
+}
+
+.messages span {
+    border: 1px dashed grey;
+    padding: 10px;
+    border-radius: 10px;
+}
