@@ -1,0 +1,19 @@
+.companyName {
+    font-size: 32px;
+    color: black;
+}
+
+.companyName:hover {
+    color: #999999;
+}
+
+.motto {
+    font-size: 20px;
+    font-weight: 400;
+    color: #999999;
+    margin-bottom: 40px;
+}
+
+.title {
+    margin-top: 0;
+}
