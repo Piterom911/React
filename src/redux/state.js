@@ -23,4 +23,21 @@ let state = {
     }
 };
 
+export let sendMessage = (textMessage) => {
+    let newMessage = {
+        id: state.dialogsPage.dialogMessages.length + 1,
+        message: textMessage
+    };
+    state.dialogsPage.dialogMessages.push(newMessage)
+};
+
+export let sendPost = (textPost) => {
+    let newPost = {
+        id: state.postsPage.postsData.length + 1,
+        likesCount: 0,
+        text: textPost
+    };
+    state.postsPage.postsData.push(newPost)
+};
+
 export default state;

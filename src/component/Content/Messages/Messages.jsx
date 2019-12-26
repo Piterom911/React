@@ -7,6 +7,11 @@ const Messages = (props) => {
     let dialogItems = props.dialogMessages.dialogItem.map(user => <DialogItem name={user.name} id={user.id}/>);
     let messages = props.dialogMessages.dialogMessages.map(message => <Message id={message.id} inout="> " message={message.message}/>);
 
+    let newMessage = React.createRef();
+    let sendMessage = () => {
+        let message = newMessage.current.value;
+        alert(message)
+    };
     return (
         <div className={s.messagesWrapper}>
             <h1>Messages</h1>
@@ -21,6 +26,8 @@ const Messages = (props) => {
                 <div className={s.messages}>
                     <h3>Conversation with Name</h3>
                     {messages}
+                    <textarea ref={newMessage} name="newMessage" id="SMS" cols="30" rows="10" placeholder="Your message"/>
+                    <button onClick={sendMessage}>Send</button>
                 </div>
             </div>
         </div>

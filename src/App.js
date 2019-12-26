@@ -3,14 +3,13 @@ import './App.css';
 import Sidebar from './component/Sidebar/Sidebar';
 import Content from './component/Content/Content';
 import {BrowserRouter} from "react-router-dom";
-import state from "./redux/state";
 
 const App = (props) => {
     return (
         <BrowserRouter>
             <div className="wrapper">
                 <Sidebar/>
-                <Content state={props.state}/>
+                <Content state={props.state} sendPost={props.sendPost} sendMessage={props.sendMessage}/>
             </div>
         </BrowserRouter>
     );

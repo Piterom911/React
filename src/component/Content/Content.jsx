@@ -10,11 +10,11 @@ import About from "./About/About";
 const Content = (props) => {
     return (
         <div className={s.content}>
-            <Route path='/profile' render={() => <Profile postsData={props.state.postsPage}/>}/>
+            <Route path='/profile' render={() => <Profile sendPost={props.sendPost} postsData={props.state.postsPage}/>}/>
             <Route path='/home' component={() => <Home/>}/>
             <Route path='/news' component={() => <News/>}/>
             <Route path='/messages'
-                   component={() => <Messages dialogMessages={props.state.dialogsPage}/>}/>
+                   component={() => <Messages sendMessage={props.sendMessage} dialogMessages={props.state.dialogsPage}/>}/>
             <Route path='/about' component={() => <About/>}/>
         </div>
     );
